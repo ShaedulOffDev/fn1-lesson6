@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 6</title>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <label>
+      <input data-id="1" data-input="2" type="checkbox" id="checkbox">
+      checkbox input
+    </label>
+
+    <h1 class="text-center text-3xl font-bold py-5">Posts</h1>
+    <button id="showModalBtn" class="border-blue-500 border-2 text-blue-500 ms-10 px-5 py-2 rounded">+ Create</button>
+    <!-- <button id="button">Click</button>
+  <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, eaque.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, aut.</p> -->
+    <div id="modal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden justify-center items-center z-50">
+      <form id="form" class="bg-white w-[350px] relative py-7 px-5 gap-3 flex flex-col shadow border rounded">
+        <button id="hideModalBtn" class="text-2xl absolute top-2 right-5" type="button">
+          X
+        </button>
+        <h3 class="text-center text-xl font-bold mb-3">Create Post</h3>
+        <input id="title-input" class="border outline-none py-1 px-2 rounded" type="text" name="title">
+        <textarea id="body-input" class="border outline-none py-1 px-2 rounded" name="body"></textarea>
+        <button type="submit" class="w-full bg-blue-500 rounded border-none text-white py-2">Submit</button>
+      </form>
+    </div>
+    <div class="posts grid grid-cols-4 gap-5 p-10"></div>
+
+    <template id="post-template">
+      <div class="shadow border rounded p-3">
+        <h3 class="post-title text-xl line-clamp-2 mb-2 font-bold">Post Title</h3>
+        <p class="post-body line-clamp-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, magnam.</p>  
+      </div>
+    </template>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
